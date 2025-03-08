@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:sarcopenia/screens/intro_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,11 +11,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp.router(
+      routerConfig: GoRouter(
+        initialLocation: '/',
+        routes: [GoRoute(path: '/', builder: (_, __) => const IntroScreen())],
       ),
     );
   }
