@@ -1,21 +1,24 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:sarcopenia/screens/intro_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sarcopenia/firebase_options.dart';
+import 'package:sarcopenia/screens/routes.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  runApp(ProviderScope(child: const MainApp()));
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends ConsumerWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: GoRouter(
-        initialLocation: '/',
-        routes: [GoRoute(path: '/', builder: (_, __) => const IntroScreen())],
-      ),
-    );
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
+
+    return MaterialApp.router(routerConfig: router);
   }
 }

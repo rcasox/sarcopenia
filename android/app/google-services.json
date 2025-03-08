@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1062676113278",
+    "firebase_url": "https://untitled3-424fd-default-rtdb.firebaseio.com",
+    "project_id": "untitled3-424fd",
+    "storage_bucket": "untitled3-424fd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062676113278:android:22ad86d95ed2968cda352f",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyOa-Lc5xdMh62AgKmVKoiOv21qieniuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062676113278:android:973f7aab76ebfab0da352f",
+        "android_client_info": {
+          "package_name": "com.example.sarcopenia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyOa-Lc5xdMh62AgKmVKoiOv21qieniuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
